@@ -6,15 +6,11 @@
 /*   By: hhurnik <hhurnik@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 15:45:47 by hhurnik           #+#    #+#             */
-/*   Updated: 2024/12/09 19:04:18 by hhurnik          ###   ########.fr       */
+/*   Updated: 2024/12/09 20:32:08 by hhurnik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h> // For strndup
-#include <unistd.h> // For write function
 
 int	are_all_arguments_empty(int argc, char **argv)
 {

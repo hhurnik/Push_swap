@@ -6,15 +6,16 @@
 /*   By: hhurnik <hhurnik@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 20:14:41 by hhurnik           #+#    #+#             */
-/*   Updated: 2024/12/09 20:14:51 by hhurnik          ###   ########.fr       */
+/*   Updated: 2024/12/09 20:31:56 by hhurnik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSHSWAP_H
 # define PUSHSWAP_H
 
-// # include "ft_printf/ft_printf.h"
 # include "libft/libft.h"
+# include <stdlib.h>
+# include <unistd.h>
 
 // instruct
 void	sa(int **stack_a, int *size_a); // norminette OK

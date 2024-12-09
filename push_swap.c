@@ -6,7 +6,7 @@
 /*   By: hhurnik <hhurnik@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:37:20 by hhurnik           #+#    #+#             */
-/*   Updated: 2024/12/09 19:09:05 by hhurnik          ###   ########.fr       */
+/*   Updated: 2024/12/09 20:32:33 by hhurnik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,30 +20,6 @@ void	push_first_two(int **stack_a, int **stack_b, int *size_a, int *size_b)
 		pb(stack_a, stack_b, size_a, size_b);
 	}
 }
-
-// wziac id najmniejszego kosztu, wyciagnac pairs[id], sprawdzic czy rra/ra
-// i to zrobic dla B
-// potem dla A,
-// na koniec wysnuc nowe targets i costs. Do this az nie zostana
-// tylko 3 elem w A
-// podzielona funkcja move_up
-// rr / rrr  RRRRRRRAARRRRRRRR
-// zakladam tylko rotowanie do gory,
-// bo rrr moznaby robic tylko w przypadku size_a = size_b
-
-/// dobry - ale probuje dwa stacki wrzucic ponizej
-// void	rotate_both(int *the_pair, int **stack_a, int **stack_b, int *size_a,
-// int *size_b)
-// {
-// 	if (the_pair[1] == the_pair[0])
-// 	{
-// 		while (the_pair[1] > 0)
-// 		{
-// 			rr(stack_a, stack_b, size_a, size_b);
-// 			the_pair[1]--;
-// 		}
-// 	}
-// }
 
 void	rotate_a(int *the_pair, int median_a, int **stack_a, int *size_a)
 {
