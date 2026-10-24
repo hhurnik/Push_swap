@@ -3,7 +3,7 @@ Library    = push_swap
 OUTN       = $(Library).a
 EXEC       = push_swap  # This is the name of your executable
 
-files      :=  instruct.c instruct2.c instruct3.c parse.c parse2.c parse3.c parse4.c sort_234.c target_b.c target_a.c push_swap.c push_swap2.c costs.c
+files      :=  operations.c reverse_operations.c push_operations.c input_validation.c parsing_utils.c parsing.c main.c sort_small.c target_b.c target_a.c push_swap.c sorting.c costs.c
 OFILES     = $(files:.c=.o)
 
 Compiler   = gcc

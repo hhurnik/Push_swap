@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap2.c                                       :+:      :+:    :+:   */
+/*   sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hhurnik <hhurnik@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 17:59:01 by hhurnik           #+#    #+#             */
-/*   Updated: 2024/12/09 20:09:29 by hhurnik          ###   ########.fr       */
+/*   Updated: 2026/10/24 17:43:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	handle_large_stack(int **stack_a, int **stack_b, int *size_a,
 	int	i;
 	int	**pairs;
 	int	***stacks;
+	int	pair_count;
 
 	stacks = malloc(2 * sizeof(int **));
 	if (!stacks)
@@ -44,11 +45,13 @@ void	handle_large_stack(int **stack_a, int **stack_b, int *size_a,
 	push_first_two(stack_a, stack_b, size_a, size_b);
 	while (*size_a > 3)
 	{
+		pair_count = *size_a;
 		pairs = find_target(*stack_a, *stack_b, *size_a, *size_b);
 		if (pairs == NULL)
 			return (ft_putstr_fd("Error\n", 2));
 		move_up(pairs, stacks, size_a, size_b);
-		while (i < *size_a)
+		i = 0;
+		while (i < pair_count)
 		{
 			free(pairs[i]);
 			i++;
